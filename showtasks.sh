@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
 
-fail() {
-  echo "There were errors"
-}
-
 stop_tomcat()
 {
   $CATALINA_HOME/bin/catalina.sh stop
 }
 
-if ./crud.sh then
-    firefox http://localhost:8080/crud/v1/tasks/showTasks
+fail() {
+  echo "There were errors"
+}
+
+end() {
+  echo "Work is finished"
+}
+
+if ./runcrud.sh; then
+    firefox http://localhost:8080/crud/v1/task/getTasks
 else
     stop_tomcat
     fail
