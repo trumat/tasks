@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export CATALINA_HOME=/usr/share/tomcat9
+
 stop_tomcat()
 {
   $CATALINA_HOME/bin/catalina.sh stop
