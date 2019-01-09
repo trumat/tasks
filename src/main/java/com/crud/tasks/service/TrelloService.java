@@ -1,6 +1,6 @@
 package com.crud.tasks.service;
 
-import com.crud.tasks.domain.CreatedTrelloCardDto;
+import com.crud.tasks.dto.CreatedTrelloCardDto;
 import com.crud.tasks.domain.Mail;
 import com.crud.tasks.dto.TrelloBoardDto;
 import com.crud.tasks.dto.TrelloCardDto;
@@ -24,7 +24,7 @@ public class TrelloService {
     private SimpleEmailService emailService;
 
     public List<TrelloBoardDto> fetchTrelloBoards() {
-        return  trelloClient.getTrelloBoards();
+        return trelloClient.getTrelloBoards();
     }
 
     public CreatedTrelloCardDto createTrelloCard(final TrelloCardDto trelloCardDto) {
