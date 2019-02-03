@@ -20,7 +20,7 @@ public class EmailScheduler {
     @Autowired
     private AdminConfig adminConfig;
 
-    @Scheduled(fixedDelay = 200000)//cron = "0 0 10 * * *")
+    @Scheduled(cron = "0 0 10 * * *")
     public void sendInformationEmail() {
         long size = taskRepository.count();
         emailService.send(new Mail(adminConfig.getAdminMail(), SUBJECT, "Currently in the database you have " + size +
