@@ -6,7 +6,6 @@ import com.crud.tasks.trello.config.AdminConfig;
 import com.crud.tasks.trello.config.CompanyConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.mail.MailException;
 import org.springframework.mail.MailSendException;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
