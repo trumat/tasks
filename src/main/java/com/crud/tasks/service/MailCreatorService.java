@@ -17,8 +17,8 @@ import java.util.List;
 
 @Service
 public class MailCreatorService {
-    public static final String CREATED_TRELLO_CARD = "mail/created-trello-card-mail";
-    public static final String DAILY_MAIL = "mail/daily-mail";
+    public static final String CREATED_TRELLO_CARD = "New Trello card email";
+    public static final String DAILY_MAIL = "Scheduled daily mail";
 
     @Autowired
     private AdminConfig adminConfig;
