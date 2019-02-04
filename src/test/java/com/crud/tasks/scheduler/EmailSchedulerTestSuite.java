@@ -2,6 +2,7 @@ package com.crud.tasks.scheduler;
 
 import com.crud.tasks.domain.Mail;
 import com.crud.tasks.repository.TaskRepository;
+import com.crud.tasks.service.MailCreatorService;
 import com.crud.tasks.service.SimpleEmailService;
 import com.crud.tasks.trello.config.AdminConfig;
 import org.junit.Test;
@@ -36,7 +37,7 @@ public class EmailSchedulerTestSuite {
         emailScheduler.sendInformationEmail();
 
         //Then
-        verify(emailService).send(mail);
+        verify(emailService).send(mail, MailCreatorService.DAILY_MAIL);
     }
 
     @Test
@@ -50,6 +51,6 @@ public class EmailSchedulerTestSuite {
         emailScheduler.sendInformationEmail();
 
         //Then
-        verify(emailService).send(mail);
+        verify(emailService).send(mail, MailCreatorService.DAILY_MAIL);
     }
 }

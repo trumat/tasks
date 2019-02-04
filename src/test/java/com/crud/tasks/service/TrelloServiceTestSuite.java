@@ -39,7 +39,7 @@ public class TrelloServiceTestSuite {
 
         //Then
         assertEquals(createdTrelloCardDto, returnedCard);
-        verify(emailService).send(mail);
+        verify(emailService).send(mail, MailCreatorService.CREATED_TRELLO_CARD);
     }
 
     @Test
@@ -55,6 +55,6 @@ public class TrelloServiceTestSuite {
 
         //Then
         assertEquals(null, returnedCard);
-        verify(emailService, times(0)).send(mail);
+        verify(emailService, times(0)).send(mail, MailCreatorService.CREATED_TRELLO_CARD);
     }
 }
